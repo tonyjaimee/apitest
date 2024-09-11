@@ -1,0 +1,10 @@
+{
+    "message": "hello there",
+    "link": "None",
+    "char_id": 2,
+    "senderId": "None",
+    "messageType": "text",
+    "messageId": "None",
+    "type": "human",
+    "j_role": "friend"
+}

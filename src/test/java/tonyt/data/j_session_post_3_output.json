@@ -1,0 +1,34 @@
+{
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_name"
+        ],
+        "msg": "Field required",
+        "input": {},
+        "url": "#string"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_type"
+        ],
+        "msg": "Field required",
+        "input": {},
+        "url": "#string"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_goal"
+        ],
+        "msg": "Field required",
+        "input": {},
+        "url": "#string"
+      }
+    ]
+  }

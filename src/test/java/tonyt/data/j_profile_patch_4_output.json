@@ -1,0 +1,284 @@
+{
+    "detail": [
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "id"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "user_id"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "name"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "role"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "display_name"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "dob"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "email"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "profile_image"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "location"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "timezone"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "privacy_accepted"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "tnc_accepted"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "companion_image"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "companion_name"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "relationship"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "preferred_chat_time_start"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "preferred_chat_time_end"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "receive_companion_notifications"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "preferred_chat_character_id"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "membership_status"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "membership_renewal"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "connected_services"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "sm_profiles"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "channel_preferences"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "interests"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "goals"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "last_login"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        },
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "last_chat"
+            ],
+            "msg": "Field required",
+            "input": {},
+            "url": "#string"
+        }
+    ]
+}

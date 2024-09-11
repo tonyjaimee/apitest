@@ -1,0 +1,61 @@
+{
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_name"
+        ],
+        "msg": "Field required",
+        "input": {
+          "message": "hello there",
+          "link": "None",
+          "char_id": 2,
+          "senderId": "None",
+          "messageType": "text",
+          "messageId": "None",
+          "type": "human",
+          "j_role": "friend"
+        },
+        "url": "https://errors.pydantic.dev/2.8/v/missing"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_type"
+        ],
+        "msg": "Field required",
+        "input": {
+          "message": "hello there",
+          "link": "None",
+          "char_id": 2,
+          "senderId": "None",
+          "messageType": "text",
+          "messageId": "None",
+          "type": "human",
+          "j_role": "friend"
+        },
+        "url": "https://errors.pydantic.dev/2.8/v/missing"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_goal"
+        ],
+        "msg": "Field required",
+        "input": {
+          "message": "hello there",
+          "link": "None",
+          "char_id": 2,
+          "senderId": "None",
+          "messageType": "text",
+          "messageId": "None",
+          "type": "human",
+          "j_role": "friend"
+        },
+        "url": "https://errors.pydantic.dev/2.8/v/missing"
+      }
+    ]
+  }

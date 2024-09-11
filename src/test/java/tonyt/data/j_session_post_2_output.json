@@ -1,0 +1,19 @@
+{
+    "detail": [
+      {
+        "type": "missing",
+        "loc": [
+          "body",
+          "session_name"
+        ],
+        "msg": "Field required",
+        "input": {
+          "session_type": "direct_chat",
+          "chosen_ai": "2",
+          "chosen_ai_role": "best friend",
+          "session_goal": "chat"
+        },
+        "url": "#string"
+      }
+    ]
+  }

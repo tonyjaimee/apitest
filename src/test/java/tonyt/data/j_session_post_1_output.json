@@ -1,0 +1,32 @@
+{
+    "session_id": "#string",
+    "metadata": {
+      "participants": [
+        {
+          "user_id": "407GFWfNRkQji7T9j0p4iSo1amH2",
+          "user_name": "tony t",
+          "type": "human",
+          "status": "active",
+          "last_chat_time": "#string",
+          "read_status": false,
+          "role_name": "#string"
+        },
+        {
+          "user_id": "2",
+          "type": "ai",
+          "status": "active",
+          "last_chat_time": null,
+          "read_status": false,
+          "role_name": "best friend"
+        }
+      ],
+      "session": {
+        "created_at": "#string",
+        "last_chat_time": "#string",
+        "session_name": "test session",
+        "session_type": "direct_chat",
+        "session_goal": "chat"
+      }
+    },
+    "ChatMessages": []
+  }
