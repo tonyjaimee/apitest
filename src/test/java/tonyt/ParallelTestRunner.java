@@ -15,23 +15,25 @@ import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
 // # auto-format shortcut: Shift+Option+F
-/**
- *
- * @author pthomas3
- */
+
 public class ParallelTestRunner {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:tonyt").tags("~@ignore")
-                .outputCucumberJson(true)
-                .parallel(5);
-        generateReport(results.getReportDir());
-        System.out.print("report dir=>" + results.getReportDir());
-        // assertTrue(results.getFailCount() == 0, results.getErrorMessages());
-        Results cleanup = Runner.path("classpath:postrun").tags("~@ignore")
+        // you can run a specific feature file
+        // Runner.path("classpath:tonyt/j_profile.feature").tags("~@ignore") to speed up your test
+        
+        // Run clean up job first to prevent process deadlock-https://stackoverflow.com/questions/60943891/dynamic-scenario-freezes-when-called-using-afterfeature-hook/60944060#60944060
+        Results cleanup = Runner.path("classpath:postrun/j_cleanup.feature").tags("~@ignore")
                 .outputCucumberJson(false)
                 .parallel(1);
+        
+        Results results = Runner.path("classpath:tonyt").tags("~@ignore")
+                .outputCucumberJson(true)
+                .parallel(2);
+        generateReport(results.getReportDir());
+        System.out.print("report dir=>" + results.getReportDir());
+       
     }
 
     public static void generateReport(String karateOutputPath) {
@@ -41,10 +43,9 @@ public class ParallelTestRunner {
             System.out.println("json path=>" + jsonPaths.get(i));
         }
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        
-        // when you change projectName param, you must execute mvn - clean to remove all files under target, else your report will not show up
+
         Configuration config = new Configuration(new File("target"), "jaimee");
-        
+
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
