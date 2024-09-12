@@ -29,6 +29,9 @@ public class ParallelTestRunner {
         generateReport(results.getReportDir());
         System.out.print("report dir=>" + results.getReportDir());
         // assertTrue(results.getFailCount() == 0, results.getErrorMessages());
+        Results cleanup = Runner.path("classpath:postrun").tags("~@ignore")
+                .outputCucumberJson(false)
+                .parallel(1);
     }
 
     public static void generateReport(String karateOutputPath) {
@@ -38,7 +41,10 @@ public class ParallelTestRunner {
             System.out.println("json path=>" + jsonPaths.get(i));
         }
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("target"), "demo");
+        
+        // when you change projectName param, you must execute mvn - clean to remove all files under target, else your report will not show up
+        Configuration config = new Configuration(new File("target"), "jaimee");
+        
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
