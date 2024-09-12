@@ -1,12 +1,12 @@
     # auto-format shortcut: Shift+Option+F
-Feature: Clean up all existing sessions
+Feature: j_cleanup_main
 Background:
   * url baseUrl = baseUrl
   
-  * def responseUser = callonce read('j_cleanup_get_profile.feature')
+  * def responseUser = karate.callSingle('j_cleanup_get_profile.feature')
   * def currentUser = responseUser.currentUser
 
-  * def responseSessionList = callonce read('j_cleanup_get_session_list.feature')
+  * def responseSessionList = karate.callSingle('j_cleanup_get_session_list.feature')
   * def sessionList = responseSessionList.sessionList
   
   # Generate JSON payload used for DELETE /api/v1/session/remove_user_from_session

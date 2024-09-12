@@ -1,5 +1,5 @@
     # auto-format shortcut: Shift+Option+F
-Feature: Profile APIs
+Feature: j_profile
 Background:
   # By design, you need to set url variable for every single feature file: 
   # https://stackoverflow.com/questions/56932789/set-url-for-all-features

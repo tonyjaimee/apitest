@@ -1,4 +1,5 @@
 package tonyt;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +14,7 @@ import com.intuit.karate.Runner;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
+// # auto-format shortcut: Shift+Option+F
 /**
  *
  * @author pthomas3
@@ -23,20 +25,20 @@ public class ParallelTestRunner {
     void testParallel() {
         Results results = Runner.path("classpath:tonyt").tags("~@ignore")
                 .outputCucumberJson(true)
-                .parallel(10);
+                .parallel(5);
         generateReport(results.getReportDir());
         System.out.print("report dir=>" + results.getReportDir());
-        //assertTrue(results.getFailCount() == 0, results.getErrorMessages());
-        Results cleanuprun = Runner.path("classpath:postrun").tags("~@ignore")
-                .outputCucumberJson(true)
-                .parallel(10);
+        // assertTrue(results.getFailCount() == 0, results.getErrorMessages());
     }
 
     public static void generateReport(String karateOutputPath) {
-        Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] {"json"}, true);
+        Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] { "json" }, true);
         List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
+        for (int i = 0; i < jsonPaths.size(); i++) {
+            System.out.println("json path=>" + jsonPaths.get(i));
+        }
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("target"), "jaimee");
+        Configuration config = new Configuration(new File("target"), "demo");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }

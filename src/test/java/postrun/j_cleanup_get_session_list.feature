@@ -1,5 +1,5 @@
 @ignore
-Feature: Get Session for the purpose of invoking POST /api/v1/chat
+Feature: j_cleanup_get_session_list
 Background:
   * url baseUrl = baseUrl
 

@@ -1,5 +1,5 @@
 @ignore
-Feature: Delete session
+Feature: j_cleanup_remove_user_from_session
 Background:
   * url baseUrl = baseUrl
 

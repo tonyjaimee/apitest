@@ -1,5 +1,5 @@
 @ignore
-Feature: API Authentication
+Feature: j_api_authentication
 
 Background:
     * url baseUrl = authUrl + authApiKey

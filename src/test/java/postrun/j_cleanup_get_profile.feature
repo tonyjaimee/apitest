@@ -1,11 +1,10 @@
 @ignore
-  Feature: Profile APIs
+  Feature: j_cleanup_get_profile
 Background:
   # By design, you need to set url variable for every single feature file: 
   # https://stackoverflow.com/questions/56932789/set-url-for-all-features
   * url baseUrl
   
-    @test_profile_1
   Scenario: GET api/v1/profile
     Given path 'api/v1/profile','/' 
     When method get

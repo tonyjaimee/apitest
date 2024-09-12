@@ -1,5 +1,5 @@
     # auto-format shortcut: Shift+Option+F
-Feature: Session APIs
+Feature: j_session
   Background:
     * url baseUrl = baseUrl
     

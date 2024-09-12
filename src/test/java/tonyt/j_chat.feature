@@ -1,5 +1,5 @@
     # auto-format shortcut: Shift+Option+F
-Feature: Chat APIs
+Feature: j_chat
 Background:
   * url baseUrl = baseUrl
     
