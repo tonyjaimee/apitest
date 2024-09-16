@@ -4,7 +4,7 @@
 
     <groupId>ai.jaimee</groupId>
     <artifactId>jaimeetest</artifactId>
-    <version>1.0</version>
+    <version>1.4.1</version>
     <packaging>jar</packaging>    
  
     <properties>
@@ -17,6 +17,8 @@
         <awssdk.version>2.27.24</awssdk.version>
         <awssdk.common.runtime.version>0.30.11</awssdk.common.runtime.version>
         <slf4j.version>2.0.16</slf4j.version>
+        <maven.surefire.version>3.5.0</maven.surefire.version>
+        <maven.resources-plugin.version>3.3.1</maven.resources-plugin.version>
     </properties>   
 
     <dependencies>
@@ -117,8 +119,38 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-            </plugin>                       
+                <version>${maven.surefire.version}</version>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <reuseForks>true</reuseForks>
+                    <forkCount>1</forkCount>
+                    <shutdown>testset</shutdown>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-library-jars</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>library</directory>
+                                    <includes>
+                                        <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>                     
         </plugins>        
     </build>
 
@@ -177,14 +209,6 @@
                                 </goals>
                             </execution>
                         </executions>                                       
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.22.2</version>
-                        <configuration>
-                            <skipTests>true</skipTests>
-                        </configuration>
                     </plugin>
                 </plugins>
             </build>

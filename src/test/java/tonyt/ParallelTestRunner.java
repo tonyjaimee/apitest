@@ -50,7 +50,6 @@ public class ParallelTestRunner {
     // Main method
     @Test
     public void runTest() {
-       
         setParameters();
         runParallelTest();
         uploadToS3();
@@ -110,8 +109,11 @@ public class ParallelTestRunner {
 
         Results results = Runner.path(FEATURE_FILE_TEST_LOCATION).tags("~@ignore")
                 .outputCucumberJson(true)
-                .parallel(2);
+                .parallel(1);
         generateReport(results.getReportDir());
+        System.out.println("#####Report directory#####");
+        System.out.println(results.getReportDir());
+        
     }
 
     private void generateReport(String karateOutputPath) {
@@ -144,14 +146,22 @@ public class ParallelTestRunner {
 
     private void uploadToS3() {
         try {
+
+            /*File myFile = new File("test_folder/test.txt");
+            myFile.getParentFile().mkdir();
+            myFile.createNewFile();
+            */
+            System.out.println("#####S3 upload begin#####");
             S3TransferManager s3TransferManager = createS3TransferManager();
             DirectoryUpload directoryUpload = s3TransferManager.uploadDirectory(UploadDirectoryRequest.builder()
                     .source(Paths.get(S3_SOURCE_FOLDER))
                     .bucket(S3_BUCKET_NAME)
                     .build());
-
+            System.out.println("#####S3 upload in progress#####");
             // Wait for the transfer to complete
             CompletedDirectoryUpload completedDirectoryUpload = directoryUpload.completionFuture().join();
+
+            System.out.println("#####S3 upload completed#####");
 
             // Print out any failed uploads
             completedDirectoryUpload.failedTransfers().forEach(System.out::println);
