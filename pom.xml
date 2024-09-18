@@ -95,9 +95,6 @@
         <testResources>
             <testResource>
                 <directory>src/test/java</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
             </testResource>
             <testResource>
                 <directory>src/test/resources</directory>
@@ -123,7 +120,7 @@
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <reuseForks>true</reuseForks>
-                    <forkCount>1</forkCount>
+                    <forkCount>3</forkCount>
                     <shutdown>testset</shutdown>
                 </configuration>
             </plugin>
@@ -138,7 +135,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target</outputDirectory>
+                            <outputDirectory>${basedir}/target/library</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>library</directory>

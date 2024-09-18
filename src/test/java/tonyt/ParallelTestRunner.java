@@ -109,7 +109,8 @@ public class ParallelTestRunner {
 
         Results results = Runner.path(FEATURE_FILE_TEST_LOCATION).tags("~@ignore")
                 .outputCucumberJson(true)
-                .parallel(1);
+                .parallel(3);
+                //one thread runs one feature, we have 3 features so we need 3 threads => https://stackoverflow.com/questions/53456782/how-to-group-some-features-in-certain-thread-and-run-it-parallel-in-karatedsl
         generateReport(results.getReportDir());
         System.out.println("#####Report directory#####");
         System.out.println(results.getReportDir());
